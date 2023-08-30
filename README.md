@@ -60,7 +60,9 @@ python app.py
 
 7. El API estará disponible en http://localhost:5000. Puedes acceder a los diferentes endpoints descritos en la documentación para realizar pruebas.
 
-¡Listo! Ahora puedes comenzar a utilizar el API REST para administrar usuarios.
+```plaintext
+  ¡Listo! Ahora puedes comenzar a utilizar el API REST para administrar usuarios.
+```
 
 ---
 
