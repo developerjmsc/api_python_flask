@@ -6,12 +6,35 @@ Esta API REST permite administrar usuarios y proporciona varios endpoints para r
 
 ## Configuración del Entorno
 
-Antes de comenzar, asegúrate de realizar los siguientes pasos:
+Antes de utilizar la API, asegúrate de configurar la base de datos y crear la tabla necesaria. Puedes usar el siguiente SQL para crear la tabla `users`:
+
+```sql
+CREATE TABLE users (
+    id UUID PRIMARY KEY,
+    cedula_identidad VARCHAR(20),
+    nombre VARCHAR(100),
+    primer_apellido VARCHAR(100),
+    segundo_apellido VARCHAR(100),
+    fecha_nacimiento DATE
+);
+
+-- Ejemplo 1
+INSERT INTO users (id, cedula_identidad, nombre, primer_apellido, segundo_apellido, fecha_nacimiento)
+VALUES ('2a543f41-c73e-4849-b6cf-a02dec6481dc', '123456789', 'Usuario 1', 'Apellido 1', 'Apellido 2', '2000-01-01');
+
+-- Ejemplo 2
+INSERT INTO users (id, cedula_identidad, nombre, primer_apellido, segundo_apellido, fecha_nacimiento)
+VALUES ('f71ef553-86c4-4a0a-ad25-112008de7d0b', '987654321', 'Usuario 2', 'Apellido 3', 'Apellido 4', '1995-05-10');
+```
+
+Asegúrate de realizar los siguientes pasos:
 
 1. Clona este repositorio en tu máquina local:
 
 ```
+
 git clone https://github.com/jm-suarez/api_python_flask.git
+
 ```
 
 2. Crea y configura el archivo `.env` en la raíz del proyecto con las variables de entorno requeridas.
@@ -55,7 +78,7 @@ pip install -r requirements.txt
 6. Levanta el API REST:
 
 ```
-python src/app.py
+python app.py
 ```
 
 7. El API estará disponible en http://localhost:5000. Puedes acceder a los diferentes endpoints descritos en la documentación para realizar pruebas.
