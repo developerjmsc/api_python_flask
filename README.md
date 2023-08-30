@@ -203,7 +203,7 @@ Actualiza los datos de un usuario existente por su ID.
 }
 ```
 
---
+---
 
 ### Eliminar un usuario
 
