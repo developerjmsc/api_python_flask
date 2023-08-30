@@ -89,7 +89,7 @@ class UserModel:
                 row = cursor.fetchone()
 
             connection.close()
-            return {"promedio_edad": row[0]}
+            return row[0]
         except Exception as ex:
             raise Exception(ex)
 
