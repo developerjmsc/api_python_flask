@@ -31,10 +31,8 @@ Asegúrate de realizar los siguientes pasos:
 
 1. Clona este repositorio en tu máquina local:
 
-```
-
+```plaintext
 git clone https://github.com/jm-suarez/api_python_flask.git
-
 ```
 
 2. Crea y configura el archivo `.env` en la raíz del proyecto con las variables de entorno requeridas.
@@ -83,9 +81,7 @@ python app.py
 
 7. El API estará disponible en http://localhost:5000. Puedes acceder a los diferentes endpoints descritos en la documentación para realizar pruebas.
 
-```plaintext
-  ¡Listo! Ahora puedes comenzar a utilizar el API REST para administrar usuarios.
-```
+¡Listo! Ahora puedes comenzar a utilizar el API REST para administrar usuarios.
 
 ---
 
@@ -94,6 +90,10 @@ python app.py
 1. [Recuperar Todos los Usuarios](#recuperar-todos-los-usuarios)
 2. [Obtener un usuario en específico](#obtener-un-usuario-en-específico)
 3. [Crear un nuevo usuario](#crear-un-nuevo-usuario)
+4. [Actualizar un usuario existente](#actualizar-un-usuario-existente)
+5. [Eliminar un usuario](#eliminar-un-usuario)
+6. [Obtener el promedio de edades](#obtener-el-promedio-de-edades)
+7. [Obtener Información del Sistema](#obtener-informacion-del-sistema)
 
 ---
 
@@ -104,7 +104,6 @@ Obtiene una lista de todos los usuarios registrados.
 - **Método:** GET
 - **Ruta:** `/usuarios`
 - **Respuesta exitosa (Código 200):**
-
   ```json
   [
     {
@@ -125,13 +124,6 @@ Obtiene una lista de todos los usuarios registrados.
     }
     // ... otros usuarios
   ]
-  ```
-
-- **Respuesta en Caso de Error (Código 500):**
-  ```json
-  {
-    "message": "Ha ocurrido un error en el servidor."
-  }
   ```
 
 ---
@@ -175,6 +167,14 @@ Crea un nuevo usuario.
 }
 ```
 
+- **Respuesta exitosa (Código 200):**
+
+```json
+{
+  "id": "2a543f41-c73e-4849-b6cf-a02dec6481dc"
+}
+```
+
 ---
 
 ### Actualizar un usuario existente
@@ -195,6 +195,14 @@ Actualiza los datos de un usuario existente por su ID.
 }
 ```
 
+- **Respuesta exitosa (Código 200):**
+
+```json
+{
+  "id": "2a543f41-c73e-4849-b6cf-a02dec6481dc"
+}
+```
+
 --
 
 ### Eliminar un usuario
@@ -203,6 +211,13 @@ Elimina un usuario existente por su ID.
 
 - **Método:** DELETE
 - **Ruta:** `/usuarios/<id>`
+- **Respuesta exitosa (Código 200):**
+
+```json
+{
+  "id": "2a543f41-c73e-4849-b6cf-a02dec6481dc"
+}
+```
 
 ---
 
@@ -212,58 +227,27 @@ Calcula y obtiene el promedio de edades de todos los usuarios en la base de dato
 
 - **Método:** GET
 - **Ruta:** `/usuarios/promedio-edad`
-- **Descripción:** Esta ruta calcula el promedio de edades de todos los usuarios registrados en la base de datos.
-
-### Respuesta exitosa
-
-- **Código:** 200
-- **Ejemplo de respuesta:**
+- **Respuesta exitosa (Código 200):**
   ```json
   {
     "promedio_edad": 29.5
   }
   ```
 
-### Respuesta en caso de error
-
-- **Código:** 500
-- **Ejemplo de respuesta:**
-
-```json
-{
-  "message": "Ha ocurrido un error al calcular el promedio de edad."
-}
-```
-
 ---
 
-### Obtener Información del Estado del Sistema
+### Obtener Información del Sistema
 
-Este endpoint permite obtener información sobre el estado del sistema, incluyendo su nombre, versión, desarrollador y correo electrónico de contacto.
+Este endpoint permite obtener información sobre el sistema, incluyendo su nombre, versión, desarrollador y correo electrónico de contacto.
 
 - **URL:** `/estado`
 - **Método:** `GET`
-- **Respuesta Exitosa:**
-
-  - Código de Estado: 200 OK
-  - Contenido:
-
-    ```json
-    {
-      "nameSystem": "Nombre del Sistema",
-      "version": "Versión del Sistema",
-      "developer": "Nombre del Desarrollador",
-      "email": "Correo Electrónico del Desarrollador"
-    }
-    ```
-
-- **Respuesta en Caso de Error:**
-
-  - Código de Estado: 500 Internal Server Error
-  - Contenido:
-
-    ```json
-    {
-      "message": "Ha ocurrido un error en el servidor."
-    }
-    ```
+- **Respuesta exitosa (Código 200):**
+  ```json
+  {
+    "nameSystem": "API PYTHON FLASK",
+    "version": "0.0.1",
+    "developer": "Jose Maria Suarez Cabrera",
+    "email": "jm.suarez.cabrera@gmail.com"
+  }
+  ```
