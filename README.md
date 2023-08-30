@@ -12,7 +12,7 @@ Esta API REST permite administrar usuarios y proporciona varios endpoints para r
 
 ---
 
-### Recuperar Todos los Usuarios
+### Recuperar Todos los Usuarios <a name="todos-usuario"></a>
 
 Obtiene una lista de todos los usuarios registrados.
 
@@ -51,7 +51,7 @@ Obtiene una lista de todos los usuarios registrados.
 
 ---
 
-### Obtener un usuario en específico
+### Obtener un usuario en específico <a name="obtener-usuario"></a>
 
 Obtiene los detalles de un usuario específico por su ID.
 
@@ -72,7 +72,7 @@ Obtiene los detalles de un usuario específico por su ID.
 
 ---
 
-### Crear un nuevo usuario
+### Crear un nuevo usuario <a name="crear-usuario"></a>
 
 Crea un nuevo usuario.
 
