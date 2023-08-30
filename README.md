@@ -55,7 +55,7 @@ pip install -r requirements.txt
 6. Levanta el API REST:
 
 ```
-python app.py
+python src/app.py
 ```
 
 7. El API estará disponible en http://localhost:5000. Puedes acceder a los diferentes endpoints descritos en la documentación para realizar pruebas.
