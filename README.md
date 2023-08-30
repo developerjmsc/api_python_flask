@@ -1,6 +1,23 @@
 # API REST de Administración de Usuarios
 
-Esta API REST permite administrar usuarios y proporciona varios endpoints para realizar operaciones relacionadas con ellos.
+## Esta API REST permite administrar usuarios y proporciona varios endpoints para realizar operaciones relacionadas con ellos.
+
+## Configuración del Entorno
+
+Antes de utilizar esta aplicación, asegúrate de configurar correctamente el archivo `.env` en la raíz del proyecto con las siguientes variables de entorno:
+
+```plaintext
+SECRET_KEY=key
+PGSQL_HOST=localhost
+PGSQL_USER=user
+PGSQL_PASSWORD=password
+PGSQL_DATABASE=database
+
+SYSTEM_NAME=system_name
+SYSTEM_VERSION=system_version
+DEVELOPER_NAME=developer_name
+DEVELOPER_EMAIL=developer_email
+```
 
 ---
 
