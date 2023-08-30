@@ -6,13 +6,13 @@ Esta API REST permite administrar usuarios y proporciona varios endpoints para r
 
 ## Endpoints
 
-1. [Recuperar Todos los Usuarios](#todos-usuario)
-2. [Obtener un usuario en específico](#obtener-usuario)
-3. [Crear un nuevo usuario](#crear-usuario)
+1. [Recuperar Todos los Usuarios](#recuperar-todos-los-usuarios)
+2. [Obtener un usuario en específico](#obtener-un-usuario-en-específico)
+3. [Crear un nuevo usuario](#crear-un-nuevo-usuario)
 
 ---
 
-### Recuperar Todos los Usuarios <a name="todos-usuario"></a>
+### Recuperar Todos los Usuarios
 
 Obtiene una lista de todos los usuarios registrados.
 
@@ -51,7 +51,7 @@ Obtiene una lista de todos los usuarios registrados.
 
 ---
 
-### Obtener un usuario en específico <a name="obtener-usuario"></a>
+### Obtener un usuario en específico
 
 Obtiene los detalles de un usuario específico por su ID.
 
@@ -72,7 +72,7 @@ Obtiene los detalles de un usuario específico por su ID.
 
 ---
 
-### Crear un nuevo usuario <a name="crear-usuario"></a>
+### Crear un nuevo usuario
 
 Crea un nuevo usuario.
 
