@@ -2,89 +2,14 @@
 
 Esta API REST permite administrar usuarios y proporciona varios endpoints para realizar operaciones relacionadas con ellos.
 
-## Table of Contents
-1. [Recuperar Todos los Usuarios](#todos-usuario)
-2. [Technologies](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
-
-
 ## Endpoints
-
-## Recuperar Todos los Usuarios
-
-Este endpoint recupera todos los usuarios almacenados en la base de datos.
-
-- **URL:** `/`
-- **Método:** `GET`
-- **Respuesta Exitosa:**
-
-  - Código de Estado: 200 OK
-  - Contenido: Una lista de diccionarios JSON, cada uno representando a un usuario.
-
-    ```json
-    [
-      {
-        "id": "ID del Usuario",
-        "cedula_identidad": "Número de Cédula de Identidad",
-        "nombre": "Nombre del Usuario",
-        "primer_apellido": "Primer Apellido del Usuario",
-        "segundo_apellido": "Segundo Apellido del Usuario",
-        "fecha_nacimiento": "Fecha de Nacimiento del Usuario"
-      },
-      ...
-    ]
-    ```
-
-- **Respuesta en Caso de Error:**
-
-  - Código de Estado: 500 Internal Server Error
-  - Contenido:
-
-    ```json
-    {
-      "message": "Mensaje de Error"
-    }
-    ```
-
-### Ejemplo de Uso
-
-#### Petición
-
-```http
-GET /
+1. [Recuperar Todos los Usuarios](#todos-usuario)
+2. [Obtener un usuario en específico](#obtener-usuario)
+3. [Crear un nuevo usuario](#crear-usuario)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-### Listar todos los usuarios
-
+### Recuperar Todos los Usuarios
+***
 Obtiene una lista de todos los usuarios registrados.
 
 - **Método:** GET
@@ -112,8 +37,19 @@ Obtiene una lista de todos los usuarios registrados.
   ]
   ```
 
-### Obtener un usuario en específico
+- **Respuesta en Caso de Error:**
 
+  - Código de Estado: 500 Internal Server Error
+  - Contenido:
+
+    ```json
+    {
+      "message": "Mensaje de Error"
+    }
+    ```
+
+### Obtener un usuario en específico
+***
 Obtiene los detalles de un usuario específico por su ID.
 
 - **Método:** GET
@@ -132,7 +68,7 @@ Obtiene los detalles de un usuario específico por su ID.
 ```
 
 ### Crear un nuevo usuario
-
+***
 Crea un nuevo usuario.
 
 - **Método:** POST
