@@ -1,6 +1,8 @@
 # API REST de Administración de Usuarios
 
-## Esta API REST permite administrar usuarios y proporciona varios endpoints para realizar operaciones relacionadas con ellos.
+Esta API REST permite administrar usuarios y proporciona varios endpoints para realizar operaciones relacionadas con ellos.
+
+---
 
 ## Configuración del Entorno
 
