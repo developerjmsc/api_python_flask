@@ -95,7 +95,7 @@ Elimina un usuario existente por su ID.
 - **Método:** DELETE
 - **Ruta:** `/usuarios/<id>`
 
-## Obtener el promedio de edades
+### Obtener el promedio de edades
 
 Calcula y obtiene el promedio de edades de todos los usuarios en la base de datos.
 
@@ -123,3 +123,34 @@ Calcula y obtiene el promedio de edades de todos los usuarios en la base de dato
   "message": "Ha ocurrido un error al calcular el promedio de edad."
 }
 ```
+
+### Obtener Información del Estado del Sistema
+
+Este endpoint permite obtener información sobre el estado del sistema, incluyendo su nombre, versión, desarrollador y correo electrónico de contacto.
+
+- **URL:** `/estado`
+- **Método:** `GET`
+- **Respuesta Exitosa:**
+
+  - Código de Estado: 200 OK
+  - Contenido:
+
+    ```json
+    {
+      "nameSystem": "Nombre del Sistema",
+      "version": "Versión del Sistema",
+      "developer": "Nombre del Desarrollador",
+      "email": "Correo Electrónico del Desarrollador"
+    }
+    ```
+
+- **Respuesta en Caso de Error:**
+
+  - Código de Estado: 500 Internal Server Error
+  - Contenido:
+
+    ```json
+    {
+      "message": "Ha ocurrido un error en el servidor."
+    }
+    ```
