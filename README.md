@@ -2,19 +2,24 @@
 
 Esta API REST permite administrar usuarios y proporciona varios endpoints para realizar operaciones relacionadas con ellos.
 
+---
+
 ## Endpoints
+
 1. [Recuperar Todos los Usuarios](#todos-usuario)
 2. [Obtener un usuario en específico](#obtener-usuario)
 3. [Crear un nuevo usuario](#crear-usuario)
 
+---
 
 ### Recuperar Todos los Usuarios
-***
+
 Obtiene una lista de todos los usuarios registrados.
 
 - **Método:** GET
 - **Ruta:** `/usuarios`
 - **Respuesta exitosa (Código 200):**
+
   ```json
   [
     {
@@ -37,19 +42,17 @@ Obtiene una lista de todos los usuarios registrados.
   ]
   ```
 
-- **Respuesta en Caso de Error:**
+- **Respuesta en Caso de Error (Código 500):**
+  ```json
+  {
+    "message": "Ha ocurrido un error en el servidor."
+  }
+  ```
 
-  - Código de Estado: 500 Internal Server Error
-  - Contenido:
-
-    ```json
-    {
-      "message": "Mensaje de Error"
-    }
-    ```
+---
 
 ### Obtener un usuario en específico
-***
+
 Obtiene los detalles de un usuario específico por su ID.
 
 - **Método:** GET
@@ -67,8 +70,10 @@ Obtiene los detalles de un usuario específico por su ID.
 }
 ```
 
+---
+
 ### Crear un nuevo usuario
-***
+
 Crea un nuevo usuario.
 
 - **Método:** POST
@@ -84,6 +89,8 @@ Crea un nuevo usuario.
   "fecha_nacimiento": "1998-09-15"
 }
 ```
+
+---
 
 ### Actualizar un usuario existente
 
@@ -103,12 +110,16 @@ Actualiza los datos de un usuario existente por su ID.
 }
 ```
 
+--
+
 ### Eliminar un usuario
 
 Elimina un usuario existente por su ID.
 
 - **Método:** DELETE
 - **Ruta:** `/usuarios/<id>`
+
+---
 
 ### Obtener el promedio de edades
 
@@ -138,6 +149,8 @@ Calcula y obtiene el promedio de edades de todos los usuarios en la base de dato
   "message": "Ha ocurrido un error al calcular el promedio de edad."
 }
 ```
+
+---
 
 ### Obtener Información del Estado del Sistema
 
