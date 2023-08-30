@@ -44,12 +44,12 @@ SECRET_KEY=key
 PGSQL_HOST=localhost
 PGSQL_USER=user
 PGSQL_PASSWORD=password
-PGSQL_DATABASE=database
+PGSQL_DATABASE=users
 
-SYSTEM_NAME=system_name
-SYSTEM_VERSION=system_version
-DEVELOPER_NAME=developer_name
-DEVELOPER_EMAIL=developer_email
+SYSTEM_NAME="API PYTHON FALSK"
+SYSTEM_VERSION="0.0.1"
+DEVELOPER_NAME="JOSE MARIA SUAREZ CABRERA"
+DEVELOPER_EMAIL="jm.suarez.cabrera@gmail.com"
 ```
 
 3. Crea un entorno virtual en la carpeta del proyecto:
