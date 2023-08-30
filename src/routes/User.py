@@ -5,7 +5,7 @@ from models.entities.User import User
 from models.UserModel import UserModel
 
 # Crea un Blueprint para las rutas de usuario. Un Blueprint es una forma de organizar las rutas en una aplicación Flask.
-main = Blueprint("movie_blueprint", __name__)
+main = Blueprint("user_blueprint", __name__)
 
 
 # Define una ruta para "/" que recupera todos los usuarios de la base de datos.
@@ -37,14 +37,14 @@ def promedio_edad():
     """
     try:
         # Utiliza el método averageAge() del modelo de usuario para calcular el promedio de edad.
-        return UserModel.averageAge()
+        return jsonify({"promedio_edad": UserModel.averageAge()})
     except Exception as ex:
         # Si ocurre algún error, retorna un objeto JSON con un mensaje de error y un código de estado HTTP 500.
         return jsonify({"message": str(ex)}), 500
 
 
 # Define una ruta para "/<id>" que busca un usuario por su id.
-@main.route("/<str:id>")
+@main.route("/<id>")
 def find(id):
     """
     Busca un usuario por su id en la base de datos.
@@ -106,17 +106,17 @@ def store():
         affected_rows = UserModel.store(user)
         # Si la inserción fue exitosa, retorna el id del nuevo usuario.
         if affected_rows == 1:
-            return jsonify(user.id)
+            return jsonify({"id": user.id})
         else:
             # Si la inserción falló, retorna un objeto JSON con un mensaje de error y un código de estado HTTP 404.
-            return jsonify({"mesage": "Error on insert"}), 404
+            return jsonify({"mesage": "Error al insertar el usuario"}), 404
     except Exception as ex:
         # Si ocurre algún error, retorna un objeto JSON con un mensaje de error y un código de estado HTTP 500.
         return jsonify({"message": str(ex)}), 500
 
 
 # Define una ruta para "/<id>" que actualiza un usuario en la base de datos. Esta ruta acepta solicitudes PUT.
-@main.route("/<str:id>", methods=["PUT"])
+@main.route("/<id>", methods=["PUT"])
 def update(id):
     """
     Actualiza un usuario existente en la base de datos.
@@ -154,17 +154,17 @@ def update(id):
         affected_rows = UserModel.update(user)
         # Si la actualización fue exitosa, retorna el id del usuario actualizado.
         if affected_rows == 1:
-            return jsonify(user.id)
+            return jsonify({"id": user.id})
         else:
             # Si la actualización falló, retorna un objeto JSON con un mensaje de error y un código de estado HTTP 404.
-            return jsonify({"mesage": "No movie updated"}), 404
+            return jsonify({"mesage": "Ningun usuario actualizado."}), 404
     except Exception as ex:
         # Si ocurre algún error, retorna un objeto JSON con un mensaje de error y un código de estado HTTP 500.
         return jsonify({"message": str(ex)}), 500
 
 
 # Define una ruta para "/<id>" que elimina un usuario de la base de datos. Esta ruta acepta solicitudes DELETE.
-@main.route("/<str:id>", methods=["DELETE"])
+@main.route("/<id>", methods=["DELETE"])
 def delete(id):
     """
     Elimina un usuario de la base de datos.
@@ -182,10 +182,10 @@ def delete(id):
         affected_rows = UserModel.delete(user)
         # Si la eliminación fue exitosa, retorna el id del usuario eliminado.
         if affected_rows == 1:
-            return jsonify(user.id)
+            return jsonify({"id": user.id})
         else:
             # Si la eliminación falló, retorna un objeto JSON con un mensaje de error y un código de estado HTTP 404.
-            return jsonify({"mesage": "No movie deleted"}), 404
+            return jsonify({"mesage": "Ningun usuario eliminado."}), 404
     except Exception as ex:
         # Si ocurre algún error, retorna un objeto JSON con un mensaje de error y un código de estado HTTP 500.
         return jsonify({"message": str(ex)}), 500
