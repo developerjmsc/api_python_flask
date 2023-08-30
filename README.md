@@ -6,7 +6,13 @@ Esta API REST permite administrar usuarios y proporciona varios endpoints para r
 
 ## Configuración del Entorno
 
-Antes de utilizar esta aplicación, asegúrate de configurar correctamente el archivo `.env` en la raíz del proyecto con las siguientes variables de entorno:
+Antes de comenzar, asegúrate de realizar los siguientes pasos:
+
+1. Clona este repositorio en tu máquina local:
+
+git clone https://github.com/jm-suarez/api_python_flask.git
+
+2. Crea y configura el archivo `.env` en la raíz del proyecto con las variables de entorno requeridas.
 
 ```plaintext
 SECRET_KEY=key
@@ -20,6 +26,33 @@ SYSTEM_VERSION=system_version
 DEVELOPER_NAME=developer_name
 DEVELOPER_EMAIL=developer_email
 ```
+
+3. Crea un entorno virtual en la carpeta del proyecto:
+
+python -m venv venv
+
+4. Activa el entorno virtual:
+
+- En Windows:
+  ```
+  venv\Scripts\activate
+  ```
+- En macOS y Linux:
+  ```
+  source venv/bin/activate
+  ```
+
+5. Instala las dependencias del proyecto:
+
+pip install -r requirements.txt
+
+6. Levanta el API REST:
+
+python app.py
+
+7. El API estará disponible en http://localhost:5000. Puedes acceder a los diferentes endpoints descritos en la documentación para realizar pruebas.
+
+¡Listo! Ahora puedes comenzar a utilizar el API REST para administrar usuarios.
 
 ---
 
