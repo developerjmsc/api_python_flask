@@ -24,4 +24,5 @@ if __name__ == "__main__":
     # Registra el manejador de error para el error 404.
     app.register_error_handler(404, page_not_found)
     # Inicia la aplicación.
-    app.run()
+    # app.run()
+    pp.run(host='0.0.0.0', port=5000)
